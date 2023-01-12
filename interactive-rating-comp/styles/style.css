@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --cardBg:rgb(30, 37, 47);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --pink:#ffa4b3;
+}
+
+body{
+    font-family: 'Overpass',sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryDarkBlue);
+}
+.ty-container{
+    display: none;
+}
+.active{
+    display: flex;
+    flex-direction: column;
+}
+.selection-txt{
+    color: var(--orange);
+    background-color: var(--darkBlue);
+    padding: .7rem;
+    border-radius: 1rem;
+    width: fit-content;
+    align-self: center;
+}
+.img-ty{
+    width: 10rem;
+    align-self: center;
+}
+.card{
+    background-color: var(--cardBg);
+    width: 22rem;
+    padding: 2rem 2rem 1.5rem;
+    border-radius: 1.8rem;
+    position: relative;
+}
+
+.icon-star{
+    padding:1rem;
+    border-radius: 50%;
+    background-color: var(--darkBlue);
+}
+.title{
+    color: var(--white);
+    font-size:1.8rem;
+    margin:1.4rem 0 0rem;
+}
+.main-text{
+    color:var(--mediumGrey);
+    line-height:1.5rem;
+    margin:1rem 0 1.5rem ;
+}
+.number-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+
+}
+.number{
+    background-color:var(--darkBlue);
+    color: var(--lightGrey);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.number:hover{
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+}
+.selected{
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+.btn-submit{
+    width: 100%;
+    text-transform: uppercase;
+    background-color: var(--orange);
+    color: var(--white);
+    height: 2.8rem;
+    border: none;
+    border-radius: 2rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.btn-submit:hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+.attribution{
+    position: absolute;
+    top: 90%;
+    left: 2%;
+}
+.attribution a{
+    color: var(--pink);
+}
+.attribution a:hover{
+    color: var(--orange);
+}
+.atr-txt{
+    color: var(--white);
+}
+
+@media (max-width:600px) {
+    .card{
+        width: 70%;
+    }
+    .selection-txt{
+        height: fit-content;
+        margin-top: 2rem;
+        padding: .6rem;
+    }
+    .title{
+        margin-top: 1rem;
+    }
+    .attribution{
+        top: 88%;
+    }
+    .main-text{
+        font-size: 1rem;
+        
+    }
+}
