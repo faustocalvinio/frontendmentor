@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root{
+
+
+
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);        
+    --Off-white: hsl(36, 100%, 99%);
+    --grayishBlue: hsl(233, 8%, 79%);
+    --darkGrayishBlue: hsl(236, 13%, 42%);
+    --veryDarkBlue: hsl(240, 100%, 5%);
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    max-width: 1440px;
+    font-size: 15px;
+    margin: 0 auto;
+    font-family: 'Inter';
+}
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0;
+}
+#nav-list{
+
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-item{
+    font-size: 15px;
+    color: var(--darkGrayishBlue);
+    font-weight:400;
+    font-family: 'Inter';
+
+}
+.nav-item:hover{
+    cursor: pointer;
+    color: var(--softRed);
+}
+#logo-navbar{
+    width: 100px;
+    height: 60px;
+}
+/* HEADER  */
+/* HEADER  */
+/* HEADER  */
+
+
+header{
+    display: flex;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+#main-article{
+   display: flex;
+   flex-direction: column;
+   width: 70%;
+}
+.cont-main-article-1{
+    width: 50%;
+}
+.cont-main-article-2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.cont-main-article-3{
+    display: flex;
+   flex-direction: row;
+   padding: 20px 0;
+   gap: 20px;
+}
+
+#web-3-desktop-img{
+    width: 100%;
+    
+}
+.main-article-title{
+    font-size: 70px;
+    font-weight: 800;
+    margin: 0;
+}
+.main-article-text{
+    font-size: 24px ;
+    font-weight: 400;
+    color: var(--darkGrayishBlue);
+}
+.main-article-button{
+    background-color: var(--softRed);
+    border: 0;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    color: var(--Off-white);
+    font-weight: 700;
+    letter-spacing: 5px;
+    width: 50%;
+    font-family: 'Inter';
+
+}
+.main-article-button:hover{
+    background-color: var(--veryDarkBlue);
+    cursor: pointer;
+}
+/* NEWS CONTAINER */
+/* NEWS CONTAINER */
+/* NEWS CONTAINER */
+/* NEWS CONTAINER */
+
+#news-container{
+    background-color: var(--veryDarkBlue);
+    padding: 20px 25px;
+}
+.news-list{
+    list-style: none;
+    padding: 0;
+}
+.news-list h3{
+    color: var(--softOrange);
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+
+}
+.news-item{
+    padding: 20px 0;
+}
+.news-item:nth-child(3){
+    border-bottom: 1px;
+    border-right: 0;
+    border-left: 0;
+    border-top: 1px;
+    border-style: solid;
+    border-color: var(--darkGrayishBlue);
+}
+.new-title{
+    font-size: 20px;
+    color: var(--Off-white);
+    margin: 0;
+}
+.new-title:hover{
+    cursor: pointer;
+    color: var(--softOrange);
+}
+.new-text{
+    color: var(--grayishBlue);
+}
+
+
+
+/* THREE NEWS */
+
+/* THREE NEWS */
+
+/* THREE NEWS */
+
+/* THREE NEWS */
+#last-news-section{
+    margin-top: 50px;
+}
+#three-news-section{
+    background-color: red;
+}
+#last-news-list{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.last-new-item{
+    display: grid; 
+    grid-template-columns: 140px 1fr; 
+    grid-template-rows: repeat(3,auto); 
+    gap: 0px 20px; 
+    grid-template-areas: 
+      "last-new-image last-new-number"
+      "last-new-image last-new-title"
+      "last-new-image last-new-text"; 
+   
+}
+.last-new-image{
+    width: 140px;
+    
+    grid-area: last-new-image; 
+}
+.last-new-number { 
+    grid-area: last-new-number; 
+    color: var(--grayishBlue);
+    font-weight: 800;
+    font-size: 40px;
+}
+.last-new-title{
+    color:var(--veryDarkBlue);
+    font-size: 25px;
+    grid-area: last-new-title;
+    margin: 0;
+}
+.last-new-title:hover{
+    cursor: pointer;
+    color: var(--softRed);
+}
+.last-new-text{
+    color: var(--darkGrayishBlue);
+    font-weight: 600;
+    grid-area: last-new-text; 
+    font-size: 17px;
+    margin: 0;
+}
+
+.responsive-nav-list{
+    display: none;
+}
+#web-3-mobile-img, .hamburger-icon{
+    display: none;
+}
+
+
+@media (max-width:375px) {
+    body{
+        padding: 0 15px;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    header{
+        flex-direction: column;
+    }
+    .hamburger-icon{
+        display: inline;
+    }
+    #last-news-list{
+        padding-bottom: 50px;
+    }
+    #main-article{
+        width: 100%;
+    }
+    .cont-main-article-1 {
+        width: 100%;
+    }
+    .cont-main-article-2 {
+        width: 100%;
+    }
+    .cont-main-article-3{
+        flex-direction: column;
+        gap: 5px;
+    }
+    #last-news-list{
+        flex-direction: column;
+        gap: 20px;
+    }
+    #nav-list{
+        display: none;
+    }
+    .main-article-title{
+        font-size: 45px;
+        margin: 0;
+    }
+    .main-article-text{
+        font-size: 20px ;
+        line-height: 35px;
+        margin: 10px 0 20px;
+    }
+    .main-article-button{
+        width: 70%;
+    }
+    #news-container{
+    }
+    #web-3-desktop-img{
+        display: none;
+       
+    }
+    #web-3-mobile-img{
+        display: inline;
+    }
+    .hamburger-icon{
+        width: 30px;
+        height: 15px;
+    }
+    nav{
+        align-items: center;
+    }
+    .responsive-nav-list{
+        list-style: none;
+        width: 60%;
+        position: absolute;
+        background-color: #fff;
+        top: 0;
+        right: -120%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 25px;
+        -webkit-box-shadow: -107px 0px 0px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: -107px 0px 0px 0px rgba(0,0,0,0.25);
+        box-shadow: -107px 0px 0px 0px rgba(0,0,0,0.25);
+        margin: 0;
+    }
+    .last-new-title{
+        margin: 6px 0;
+        font-size:20px;
+    }
+    .last-new-text{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .close-responsive-menu{
+        width: 30px;
+        float: right;
+    }
+
+    .show-menu{
+        animation: animationResponsiveMenu 0.6s forwards   normal ;
+    }
+    .hide-menu{
+        animation: animationHideResponsiveMenu 0.6s forwards   normal ;
+    }
+    @keyframes animationResponsiveMenu {
+        from{
+            
+
+        }
+        to{
+           right: 0;
+           
+        }
+    }
+    @keyframes animationHideResponsiveMenu {
+        from{
+            right: 0;
+
+        }
+        to{
+           right:-120%;
+        }
+    }
+}

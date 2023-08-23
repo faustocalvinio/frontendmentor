@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+:root{
+    
+    --white: hsl(0, 0%, 100%);
+    --lightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+
+    --linearGradient:  #600594;
+    --redError: hsl(0, 100%, 66%);
+
+    /* --paddingFrontCard:0px; */
+
+}
+
+
+
+body{
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 150px;
+}
+
+section{
+    z-index: 2;
+}
+
+
+
+
+#cards-section{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.bg-pattern{
+    background-image: url('../images/bg-main-desktop.png');
+    height: 100vh;
+    position: absolute;
+    width: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+}
+
+/* CARDS STYLES */
+/* CARDS STYLES */
+/* CARDS STYLES */
+
+
+.front-card{
+    background:url('../images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 447px;
+    height: 245px;
+    border-radius: 10px;
+    position: relative;
+    transform: translateX(-100px);
+    padding: 30px;
+}
+.reverse-card{
+    background:url('../images/bg-card-back.png');
+    width: 447px;
+    height: 245px;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.all-digits{
+    margin-top: 20%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.all-digits span{
+    font-size: 30px;
+}
+.name-date{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+
+
+
+/* INPUT CONTAINER STYLES */
+/* INPUT CONTAINER STYLES */
+/* INPUT CONTAINER STYLES */
+/* INPUT CONTAINER STYLES */
+
+#form-container{
+    max-width: 500px;
+    min-width: 400px;
+}
+
+#data-form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-card-info{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(128, 128, 128, 0.349);
+    font-family: 'Space Grotesk';
+    
+}
+.input-card-info::placeholder{
+    color: var(--lightGrayishViolet);
+}
+.input-card-info:focus{
+    border-color: linear-gradient(90deg, rgba(100,72,254,1) 0%, rgba(96,5,148,1) 58%);
+
+}
+.label-card-info{
+    text-transform: uppercase;
+    /* margin: 16px 0; */
+    letter-spacing: 2px;
+    padding: 16px 0;
+}
+
+#submit-btn{
+    background-color: var(--veryDarkViolet);
+    color: var(--white) ;
+    border: 1px solid --veryDarkViolet;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+}
+
+#submit-btn:hover{
+    background-color: var(--veryDarkViolet);
+    color: var(--white) ;
+    border: 1px solid #ff0000;
+    cursor: pointer;
+
+}
+
+
+.container-exp-cvc {  display: grid;
+    grid-template-columns: 25% 25% 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "exp-date-label exp-date-label cvc-label cvc-label"
+      "exp-mm-input exp-yy-input cvc-input cvc-input";
+  }
+  
+.exp-date-label { 
+    grid-area: exp-date-label;
+}
+  
+.cvc-label { 
+    grid-area: cvc-label; 
+}
+  
+.exp-mm-input { 
+    grid-area: exp-mm-input;
+}
+  
+.exp-yy-input { 
+    grid-area: exp-yy-input; 
+}
+  
+.cvc-input { 
+    grid-area: cvc-input; 
+}
+  
+
