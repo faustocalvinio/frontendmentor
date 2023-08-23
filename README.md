@@ -10,5 +10,6 @@ You can see them live in the following links
 - [Interactive Rating Component](https://qr-code-fcc.netlify.app/)
 - [NFT Preview Card Component](https://nft-card-preview-fcc.netlify.app/)
 - [Order Summary Card](https://order-summary-fcc.netlify.app/)
+- [Product preview card component](https://product-preview-card-fcc.netlify.app/)
 - [QR Code Component](https://qr-code-fcc.netlify.app/)
 - [Time Tracking Dashboard ](https://time-tracking-dashboard-fcc.netlify.app/)
