@@ -2,8 +2,6 @@
 
 :root{
 
-
-
     --softOrange: hsl(35, 77%, 62%);
     --softRed: hsl(5, 85%, 63%);        
     --Off-white: hsl(36, 100%, 99%);
@@ -16,14 +14,12 @@
 body{
     padding: 0;
     margin: 0;
-    max-width: 1440px;
+    max-width: 1340px;
     font-size: 15px;
     margin: 0 auto;
     font-family: 'Inter';
+    background-color: var(--Off-white);
 }
-/* NAVBAR */
-/* NAVBAR */
-/* NAVBAR */
 /* NAVBAR */
 
 nav{
@@ -35,10 +31,10 @@ nav{
 
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 .nav-item{
-    font-size: 15px;
+    font-size: 16px;
     color: var(--darkGrayishBlue);
     font-weight:400;
     font-family: 'Inter';
@@ -53,11 +49,8 @@ nav{
     height: 60px;
 }
 /* HEADER  */
-/* HEADER  */
-/* HEADER  */
 
-
-header{
+main{
     display: flex;
     gap: 25px;
     margin-top: 50px;
@@ -91,14 +84,15 @@ header{
     
 }
 .main-article-title{
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 800;
     margin: 0;
 }
 .main-article-text{
-    font-size: 24px ;
+    font-size: 20px ;
     font-weight: 400;
     color: var(--darkGrayishBlue);
+    line-height: 30px;
 }
 .main-article-button{
     background-color: var(--softRed);
@@ -110,31 +104,28 @@ header{
     letter-spacing: 5px;
     width: 50%;
     font-family: 'Inter';
-
 }
 .main-article-button:hover{
     background-color: var(--veryDarkBlue);
     cursor: pointer;
 }
-/* NEWS CONTAINER */
-/* NEWS CONTAINER */
-/* NEWS CONTAINER */
+
 /* NEWS CONTAINER */
 
 #news-container{
     background-color: var(--veryDarkBlue);
     padding: 20px 25px;
+    width: 25%;
 }
 .news-list{
     list-style: none;
     padding: 0;
 }
-.news-list h3{
+#titule-news-list{
     color: var(--softOrange);
     margin: 0;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
-
 }
 .news-item{
     padding: 20px 0;
@@ -148,7 +139,7 @@ header{
     border-color: var(--darkGrayishBlue);
 }
 .new-title{
-    font-size: 20px;
+    font-size: 24px;
     color: var(--Off-white);
     margin: 0;
 }
@@ -158,15 +149,13 @@ header{
 }
 .new-text{
     color: var(--grayishBlue);
+    font-size: 17px;
+    line-height: 30px;
 }
 
 
 
-/* THREE NEWS */
 
-/* THREE NEWS */
-
-/* THREE NEWS */
 
 /* THREE NEWS */
 #last-news-section{
@@ -189,8 +178,7 @@ header{
     grid-template-areas: 
       "last-new-image last-new-number"
       "last-new-image last-new-title"
-      "last-new-image last-new-text"; 
-   
+      "last-new-image last-new-text";    
 }
 .last-new-image{
     width: 140px;
@@ -228,16 +216,26 @@ header{
     display: none;
 }
 
-
+.attribution{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
 @media (max-width:375px) {
     body{
-        padding: 0 15px;
-        width: 100vw;
+        padding: 0;
+        width: 100%;
         overflow-x: hidden;
+        
     }
     
-    header{
+    main{
         flex-direction: column;
+        width: 90%;
+        margin:  50px auto;
+    }
+    .nav-item{
+        color: #000;
     }
     .hamburger-icon{
         display: inline;
@@ -271,13 +269,14 @@ header{
     }
     .main-article-text{
         font-size: 20px ;
-        line-height: 35px;
+        line-height: 30px;
         margin: 10px 0 20px;
     }
     .main-article-button{
         width: 70%;
     }
     #news-container{
+        width: 85%;
     }
     #web-3-desktop-img{
         display: none;
@@ -292,6 +291,7 @@ header{
     }
     nav{
         align-items: center;
+        padding: 10px 20px 0;
     }
     .responsive-nav-list{
         list-style: none;
@@ -309,7 +309,13 @@ header{
         -moz-box-shadow: -107px 0px 0px 0px rgba(0,0,0,0.25);
         box-shadow: -107px 0px 0px 0px rgba(0,0,0,0.25);
         margin: 0;
+        padding: 100px 0px 0 50px;
     }
+    #last-news-section{
+        width: 90%;
+        margin:  50px auto;
+    }
+
     .last-new-title{
         margin: 6px 0;
         font-size:20px;
@@ -322,6 +328,9 @@ header{
     .close-responsive-menu{
         width: 30px;
         float: right;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 
     .show-menu{
@@ -348,5 +357,9 @@ header{
         to{
            right:-120%;
         }
+    }
+    .attribution{
+        left: 5%;
+        top: 190%;
     }
 }

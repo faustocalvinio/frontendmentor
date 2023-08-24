@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+
+}
+
+body{
+    padding: 0;
+    background-color: pink  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* MAIN CONTAINER */
+
+
+.main-container{
+    background-color: red;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 80vw;
+    min-width: 700px;
+}
+
+
+/* IMAGENES */
+.image-desktop{
+    width: 100%;
+}
+
+
+/* INFO CONTAINER */
+.info-container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+
+.title{
+
+}
+.description{
+
+}
+.stats-container{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ATTRIBUTION */
+.attribution{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
