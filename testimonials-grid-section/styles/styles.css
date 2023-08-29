@@ -23,7 +23,7 @@ body{
 .grid-container {  
     display: grid;
     grid-template-columns: repeat(4,300px);
-    grid-template-rows: repeat(2,auto);
+    grid-template-rows: repeat(2,340px);
     gap: 40px 40px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -101,7 +101,7 @@ body{
     opacity: 0.7;
     font-weight: 500;
     line-height: 20px;
-
+    font-size: 13px;
   }
 
 .color-white{
@@ -120,4 +120,13 @@ body{
 .fifth-container
 {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width:375px) {
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
 }

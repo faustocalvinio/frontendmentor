@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+
+    --almostWhite: hsl(0, 0%, 98%);
+    --mediumGray: hsl(0, 0%, 41%);
+    --almostBlack: hsl(0, 0%, 8%);
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Epilogue';
+}
+
+/* NAVBAR */
+#navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 1px solid red;
+    align-items: center;
+    padding: 0 0px;
+}
+
+#logo-links-list{
+    display: flex;
+    gap: 40px ;
+    list-style: none;
+}
+
+
+
+.nav-link{
+    text-decoration: none;
+    color: var(--mediumGray);
+}
+
+.nav-link:hover{
+    color: var(--almostBlack);
+}
+
+
+
+
+
+
+
+
+
+
+/* BUTTONS CONTAINER */
+#buttons-container{
+}
+
+#register-button , #login-button{
+    color: var(--mediumGray);
+    text-decoration: none;
+
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+#register-button {
+    border: 1px solid var(--mediumGray);
+}
+
+
+#register-button:hover{
+    color: var(--almostBlack);
+    border-color: var(--almostBlack);
+}
+
+#login-button:hover{
+    color: var(--almostBlack);
+}
+
+
+
+/* MAIN CARD */
+#main-content{
+    display: flex;
+    max-width: 1400px;
+    gap: 100px;
+   
+}
+
+/* TEXT CONTAINER */
+.text-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.title{
+    font-size: 70px;
+    font-weight: 700;
+}
+.description{
+    font-size: 16px;
+    color: var(--mediumGray);
+}
+#learn-more-link{
+    background-color: var(--almostBlack);
+    width: fit-content;
+    color: var(--almostWhite);
+    text-decoration: none;
+    padding: 20px 25px;
+    border-radius: 15px;
+    font-weight: 700;
+    border: 1px solid var(--almostBlack);
+}
+#learn-more-link:hover{
+    background-color: transparent;
+    color: var(--almostBlack);
+}
+
+/* IMAGE CONTAINER */
+.image-container{
+    width: 40%;
+}
+#desktop-image{
+    width: 100%;
+}
+
+/* CLIENTS CONTAINER */
+
+.icons-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.client-logo{
+    border: 1px solid red;
+}
+
+.attribution{
+    display: none;
+}
