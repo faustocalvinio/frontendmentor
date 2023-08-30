@@ -8,7 +8,7 @@
 }
 body{
     margin: 0 auto;
-    padding: 0;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +22,10 @@ body{
     top: 0;
     left: 0;
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid red;
     align-items: center;
-    padding: 0 0px;
 }
 
 #logo-links-list{
@@ -40,8 +39,14 @@ body{
 .nav-link{
     text-decoration: none;
     color: var(--mediumGray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-
+.nav-link img{
+    color: red;
+    fill: red;
+}
 .nav-link:hover{
     color: var(--almostBlack);
 }
@@ -87,7 +92,7 @@ body{
     display: flex;
     max-width: 1400px;
     gap: 100px;
-   
+   width: 80%;
 }
 
 /* TEXT CONTAINER */
@@ -95,17 +100,21 @@ body{
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 80px;
+    justify-content: center;
+    gap: 50px;
 }
 
 .title{
     font-size: 70px;
     font-weight: 700;
+    margin: 0;
 }
 .description{
-    font-size: 16px;
+    margin: 0;
+
+    font-size: 18px;
     color: var(--mediumGray);
+    line-height: 25px;
 }
 #learn-more-link{
     background-color: var(--almostBlack);
@@ -128,6 +137,7 @@ body{
 }
 #desktop-image{
     width: 100%;
+
 }
 
 /* CLIENTS CONTAINER */
@@ -136,11 +146,23 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin: 70px 0 0;
 }
 .client-logo{
     border: 1px solid red;
+    
 }
 
 .attribution{
     display: none;
+}
+
+
+
+
+
+
+.features-dropdown{
+    position: absolute;
+    top: 15%;
 }
