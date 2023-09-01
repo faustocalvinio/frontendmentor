@@ -23,7 +23,7 @@ body{
 .grid-container {  
     display: grid;
     grid-template-columns: repeat(4,300px);
-    grid-template-rows: repeat(2,340px);
+    grid-template-rows: repeat(2,fit-content);
     gap: 40px 40px;
     grid-auto-flow: row;
     grid-template-areas:

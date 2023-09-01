@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+body{
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--VeryDarkBlue);
+    font-family: 'Raleway';
+    overflow-y: hidden;
+}
+header{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.image-background-cont{
+    width: 100%;
+    position: absolute;
+    height: 49.7vh;
+    top: 50vh;
+}
+.image-background-cont-mobile{
+    display: none;
+}
+.bg-image{
+    width: 100%;
+    height: 100%;
+}
+/* MAIN CONTAINER */
+.main-container{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 20px;
+}
+/* LOGO CONTAINER */
+.logo-container{
+    background-color: var(--DarkBlue);
+    width: 300px;
+    padding: 40px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    flex-direction: column;
+    border-radius: 15px;
+    border-top-right-radius: 50%;
+    transform: translateY(-30px);
+}
+.fylo-logo{
+    width:170px;
+}
+.three-icons-container{
+    display: flex;
+    gap: 20px;
+}
+.three-icons-container img{
+    background-color: var(--VeryDarkBlue);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 24px;
+    min-height: 24px;
+}
+.three-icons-container img:nth-child(1){
+    height: 24px;
+    width: 20px;
+}
+.three-icons-container img:nth-child(2){
+    width: 28px;
+    height: 20px;
+}
+/* DATA CONTAINER  */
+
+.data-container{
+    background-color: var(--DarkBlue);
+    border-radius:10px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 40px;
+    width: 500px;
+    position: relative;
+}
+.bg-div{
+    background-color:var(--VeryDarkBlue);
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0;
+}
+.coloured-div{
+    width: 81.5%;
+    background:linear-gradient(90deg,hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    height: 75%;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+}
+.circle-div{
+    background-color: #fff;
+    width:15px;
+    height: 15px;
+    margin-top: 2px;
+    margin-right: 2px;
+    border-radius: 20px;
+    float: right;
+}
+.main-text{
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.gigas-text-container{
+    display: flex;
+    justify-content: space-between;
+}
+.gigas-text{
+    color: #fff;
+    font-weight: 700;
+}
+
+.w-700{
+    font-weight: 700;
+}
+/* POP UP */
+.pop-up-gigas-left{
+    background-color: #fff;
+    width: 180px;
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    right: 40px;
+    top: -50px;
+}
+.triangle-white {
+    width: 0;
+    height: 0;
+    border-right: 50px solid #fff;
+    border-top: 50px solid #fff;
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid transparent; 
+    position: absolute;
+    right: 40px;
+    top: -48px;
+    border-top-right-radius: 10px;
+}
+
+.black-numbers{
+    color: #000;
+    font-size: 40px;
+    margin: 0;
+}
+
+.pop-up-text{
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+    color: var(--GrayishBlue);
+}
+/* ATTRIBUTION */
+.attribution{
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+}
+.attribution span{
+    color: #fff;
+}
+.attribution a{
+    color: var(--PaleBlue);
+}
+
+@media (max-width:375px) {
+    body{
+        width: 100vw;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container{
+        flex-direction: column;
+        padding: 0;
+    }
+    .logo-container{
+        width: 270px;
+        padding: 30px;
+    }
+    .data-container{
+        padding: 40px 30px 70px;
+        width: 270px;
+    }
+    .image-background-cont{
+        display: none;
+    }
+    .image-background-cont-mobile{
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bg-image-mobile{
+        width: 100%;
+        height: 100%;
+    }
+    .triangle-white{
+        display: none;
+    }
+    .pop-up-gigas-left{
+        top: 80%;
+        right: 17%;
+    }
+    .circle-div{
+        margin-top: 1px;
+        margin-right: 1px;
+    }
+    .attribution{
+        top: 91%;
+    }    
+}
