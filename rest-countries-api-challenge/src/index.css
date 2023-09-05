@@ -20,10 +20,16 @@
     --countryCardBg:hsl(209, 23%, 22%);
     --cardShadow: rgba(0,0,0,0.6);
 }
+#root{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
 body{
     padding: 0;
-    
+    margin: 0;
     min-height: 100vh;
     font-family: 'Nunito Sans';
     background-color: var(--bodyBg);
@@ -36,10 +42,17 @@ body{
     align-items: center;
     width: 100%;
     padding: 10px 0px;
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray;*/
+    -webkit-box-shadow: 0px 7px 22px 9px rgba(0,0,0,0.03); 
+    -moz-box-shadow: 0px 7px 22px 9px rgba(0,0,0,0.03);
+    box-shadow: 0px 7px 22px 9px rgba(0,0,0,0.03);
 }
 .header-title{    
     color: var(--fontColor);
+    margin-left: 30px;
+}
+.theme-switch-container{
+    margin-right: 30px;
 }
 .theme-switch-container button{
     background-color: transparent;
@@ -47,13 +60,48 @@ body{
     font-family: inherit;
     color: var(--fontColor);
     font-weight: 800;
+    cursor: pointer;
 }
 /* FILTERS */
 .filters-container{
     display: flex;
     justify-content: space-between;
     width: 90%;
+    /* border: 1px solid blue; */
+    padding: 30px 0px;
 }
+.search-input{
+    background-color: var(--navbarBg);
+    color: var(--fontColor);
+    border: 0;
+    padding: 15px;
+    min-width: 30vw;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    -moz-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    font-family: 'Nunito Sans';
+}
+.search-input::placeholder{
+    color: var(--fontColor);
+    font-family: 'Nunito Sans';
+
+}
+
+.select-region{
+    background-color: var(--navbarBg);
+    color: var(--fontColor);
+    font-family: 'Nunito Sans';
+    border: 0;
+    padding: 15px;
+    min-width:15vw;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    -moz-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    box-shadow: -1px 9px 53px 0px var(--cardShadow);
+}
+
+
 /* GRID ALL COUNTRIES */
 .grid-countries{
     display: grid;
@@ -61,6 +109,7 @@ body{
     gap: 30px;
     padding: 30px 0;
     justify-content: center;
+    width: 90%;
 }
 /* COUNTRY CARD */
 .country-card{
@@ -96,8 +145,24 @@ body{
     opacity: 0;
 }
 /* SINGLE COUNTRY */
+.loading{
+    color: var(--fontColor);
+}
 .back-button{
-   
+   position: absolute;
+   top: 15%;
+   left: 5%;
+   text-decoration: none;
+   padding: 15px 25px;
+   background-color: var(--navbarBg);
+   color: var(--fontColor);
+   -webkit-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    -moz-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    border-radius: 5px;
+}
+.back-button i{
+    margin: 0 10px;
 }
 .single-country-container{
     display: flex;
@@ -106,17 +171,57 @@ body{
     min-height:90vh;
 }
 .image-container{
-
+    /* border: 1px solid red; */
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.image-container img{
+    /* max-height: 400px; */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 .single-card-data-container{
-
+    width: 50%;
+    /* border: 1px solid pink; */
+    display: flex;
+    flex-direction: column;
+    flex-flow:row wrap;
+}
+.single-card-data-container h1{
+    width: 100%;
 }
 .first-data-container{
-
+    /* border: 1px solid blue; */
+    width: 50%;
 }
 .second-data-container{
-
+    /* border: 1px solid blueviolet; */
+    width: 50%;
 }
 .related-countries-container{
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.single-country-title{
+    color: var(--fontColor);
+}
+.single-card-data-container p{
+    color: var(--fontColor);
+}
+.border-country{
+    /* width: 50px; */
+    height: 20px;
+    background-color: var(--navbarBg);
+    -webkit-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    -moz-box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    box-shadow: -1px 9px 53px 0px var(--cardShadow);
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: var(--navbarBg);
+    color: var(--fontColor);
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "../utils/api";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { data } from '../mocks/data'
 import { CountryCard } from "../components/CountryCard";
 export const Homepage = () => {
@@ -8,10 +8,14 @@ export const Homepage = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState("");
 
+  
+   
+
     const mockData=()=>{
       setCountries(data)
       setIsLoading(false)
     }
+
 
     useEffect(()=>{
       mockData()
@@ -40,12 +44,12 @@ export const Homepage = () => {
     //     getAllCountries();
     //   }, []);
   return (
-
+ 
     <>
 
       <div className="filters-container">
-        <input type="text" name="" id="" placeholder="Search for a country..."/>
-        <select name="" id="">
+        <input type="text" name="" id="" className="search-input" placeholder="Search for a country..."/>
+        <select name="" id="" className="select-region">
           <option value="Filter by Region" selected>Filter by Region</option>
           <option value="Africa" className="regions-option">Africa</option>
           <option value="America" className="regions-option">America</option>
@@ -55,7 +59,7 @@ export const Homepage = () => {
         </select>
       </div>
       <main className="grid-countries">
-          {isLoading && !error && <h4>Loading........</h4>}
+          {isLoading && !error && <h4 className="loading">Loading........</h4>}
           {error && !isLoading && <h4>{error}</h4>}
           
           {countries?.map((country) =><CountryCard key={countries.population} name={country.name} capital={country.capital} flag={country.flags.png} population={country.population} region={country.region}/>)}
