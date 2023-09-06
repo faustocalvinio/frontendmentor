@@ -158,11 +158,26 @@ body{
 }
 
 
+/* DROPDOWNS CONTAINERS */
 
-
-
+#features{
+    position: relative;
+}
 
 .features-dropdown{
     position: absolute;
-    top: 15%;
+    right:0px;
+    top:40px;
+    background-color: red;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+.features-dropdown ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px       ;
+    list-style: none;
+}
+.hide{
+    display: none;
 }
