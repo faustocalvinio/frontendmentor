@@ -7,12 +7,13 @@ export const Homepage = () => {
     const [countries, setCountries] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState("");
-
-  
+    const [searchValue, setSearchValue] = useState("")
+    const [initialCountries, setInitialCountries] = useState()
    
 
     const mockData=()=>{
       setCountries(data)
+      setInitialCountries(data)
       setIsLoading(false)
     }
 
@@ -20,6 +21,34 @@ export const Homepage = () => {
     useEffect(()=>{
       mockData()
     },[])
+
+
+    const filterByName=(name)=>{
+
+    }
+
+    const onSearchByName=(name)=>{
+      setSearchValue(name)
+      
+    }
+    useEffect(()=>{
+      if(searchValue.length===0){
+        return
+      }else{
+        // const newArr=[countries[0],countries[1]]
+        // setCountries(initialCountries)
+        console.log(initialCountries)
+        console.log(countries)
+        const filteredArr=countries.filter(country=>country.name.includes(searchValue))
+        console.log(filteredArr)
+        setCountries(filteredArr)
+      }
+      
+      console.log(searchValue.length)
+      console.log(countries)
+      }
+      ,[searchValue]
+    )
 
     // const getAllCountries = async () => {
     //     try {
@@ -48,7 +77,15 @@ export const Homepage = () => {
     <>
 
       <div className="filters-container">
-        <input type="text" name="" id="" className="search-input" placeholder="Search for a country..."/>
+        <input 
+          type="text" 
+          name="" 
+          id="" 
+          className="search-input"         
+          placeholder="Search for a country..."
+          value={ searchValue }
+          onChange={ (e)=>onSearchByName(e.target.value) }
+        />
         <select name="" id="" className="select-region">
           <option value="Filter by Region" selected>Filter by Region</option>
           <option value="Africa" className="regions-option">Africa</option>
