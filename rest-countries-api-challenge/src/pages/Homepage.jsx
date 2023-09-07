@@ -9,7 +9,11 @@ export const Homepage = () => {
     const [error, setError] = useState("");
     const [searchValue, setSearchValue] = useState("")
     const [initialCountries, setInitialCountries] = useState()
-   
+    const [selectedRegion, setSelectedRegion] = useState("")
+
+
+
+  const initdata=data;
 
     const mockData=()=>{
       setCountries(data)
@@ -27,10 +31,84 @@ export const Homepage = () => {
 
     }
 
+
+    const getCountryByRegion=async(region)=>{
+      // const resp = await fetch(`https://restcountries.com/v3.1/region/${region}`)
+      // const data= await resp.json()
+
+      // return await data
+      fetch(`https://restcountries.com/v3.1/region/${region}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Assuming you're working with JSON data
+        return response.json(); // This returns a Promise
+      })
+      .then((data) => {
+        // Now you have access to the actual data
+        const newData=data
+        // setCountries(data
+
+
+        // console.log(newData);
+        // console.log(countries)
+        // setCountries(newData)
+      })
+      .catch((error) => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    }
+
+
+
+
     const onSearchByName=(name)=>{
       setSearchValue(name)
       
     }
+
+
+
+
+    const onRegionChange=(event)=>{
+      setSelectedRegion(event.target.value);
+    
+    }
+
+    useEffect(() => {
+      if(selectedRegion!==""){
+        // getCountryByRegion(selectedRegion)
+
+        const testFilter=countries.filter(country=>country.region.toLowerCase()===selectedRegion.toLowerCase())
+        console.log(testFilter)
+        setCountries(testFilter)
+
+      }else if(selectedRegion==="Filter by Region"){
+        // setCountries(initdata)
+      }
+
+
+      console.log(selectedRegion)
+    }, [selectedRegion])
+    
+
+
+
+
+
+
+
+
+
+
+    useEffect(() => {
+      
+    }, [countries])
+    
+
+
+
     useEffect(()=>{
       if(searchValue.length===0){
         return
@@ -86,10 +164,10 @@ export const Homepage = () => {
           value={ searchValue }
           onChange={ (e)=>onSearchByName(e.target.value) }
         />
-        <select name="" id="" className="select-region">
-          <option value="Filter by Region" selected>Filter by Region</option>
+        <select name="" id="" className="select-region" value={ selectedRegion } onChange={ onRegionChange }  >
+          <option value="Filter by Region">Filter by Region</option>
           <option value="Africa" className="regions-option">Africa</option>
-          <option value="America" className="regions-option">America</option>
+          <option value="Americas" className="regions-option">America</option>
           <option value="Asia" className="regions-option">Asia</option>
           <option value="Europe" className="regions-option">Europe</option>
           <option value="Oceania" className="regions-option">Oceania</option>
@@ -99,7 +177,7 @@ export const Homepage = () => {
           {isLoading && !error && <h4 className="loading">Loading........</h4>}
           {error && !isLoading && <h4>{error}</h4>}
           
-          {countries?.map((country) =><CountryCard key={countries.population} name={country.name} capital={country.capital} flag={country.flags.png} population={country.population} region={country.region}/>)}
+          {countries?.map((country) =><CountryCard key={crypto.randomUUID()} name={country.name} capital={country.capital} flag={country.flags.png} population={country.population} region={country.region}/>)}
 
       </main>
     

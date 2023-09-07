@@ -21,7 +21,10 @@ export const ContainerURLS = () => {
   }
   ]
   const [inputValue,setInputValue]=useState("")
-  const [fullLinks, setFullLinks] = useState([])
+  const [fullLinks, setFullLinks] = useState([{
+    fullLink:'https://www.twitch.tv/',
+    shortenedLink:'shrtco.de/lLRtub',
+  }])
   const [shortenedLinks, setShortenedLinks] = useState([])
 
 
@@ -29,7 +32,7 @@ export const ContainerURLS = () => {
 
 
   const getShortLink=async(link)=>{
-    const response=await fetch(`https://api.shrtco.de/v2/shorten?url=${link}/very/long/link.html`)
+    const response=await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
   
     const data=await response.json()
 
@@ -51,15 +54,26 @@ export const ContainerURLS = () => {
 
 
   const useLinkShortener=()=>{
-    getShortLink(inputValue)
-    console.log(inputValue)
+    const errorTextElement=document.querySelector('.add-a-link')
+    const inputElement=document.querySelector('.input-url');
+    if(inputValue===""){
+      errorTextElement.classList.remove('hidden')
+      inputElement.classList.add('red-input')      
+    }else if(inputValue!==""){
 
+      if(inputElement.classList.contains('red-input')){
+        inputElement.classList.remove('red-input')
+        errorTextElement.classList.add('hidden')
+      }
+      getShortLink(inputValue)
+      console.log(inputValue)
+      setInputValue("")
+    }      
+      
     // setFullLinks([...{
 
     // }])
-
-
-  }
+}
   
 
   useEffect(() => {
@@ -74,10 +88,10 @@ export const ContainerURLS = () => {
     <input 
       type="url" 
       name="" 
-      id="input-url" 
       placeholder="Shorten a link here..."
       value={ inputValue }
       onChange={ (e)=>setInputValue(e.target.value) }
+      className='input-url'
       />
     <button 
       id="shorten-button" 
@@ -86,6 +100,7 @@ export const ContainerURLS = () => {
       >
       Shorten It!
       </button>
+      <p className="add-a-link hidden">Please add a link</p>
     </div>
 
     </section>
