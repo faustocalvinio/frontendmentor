@@ -1,21 +1,16 @@
-import { BoostSection, ContainerURLS, Header,NavBar,StadisticsSection } from './components'
-import { Footer } from './components/Footer'
+import { BoostSection, Header , Navbar , StadisticsSection, Footer, ShortenSection } from './components'
 
 function App() {
     
-
-
-
   return (
-    <div className="App">
-      <NavBar />
+    <main className="App">
+      <Navbar />
       <Header />
-      <ContainerURLS />
+      <ShortenSection />
       <StadisticsSection />
-
       <BoostSection />
       <Footer />
-    </div>
+    </main>
   )
 }
 

@@ -1,6 +1,6 @@
 import shortlyLogoSvg from  '../assets/images/logo.svg'
 
-export const NavBar = () => {
+export const Navbar = () => {
  
    return (
     <>
@@ -14,8 +14,12 @@ export const NavBar = () => {
                 <li>resources</li> 
             </ul>
             <ul className="login-container">    
-                <button className="login-btn">Login</button>
-                <button className="sign-up-btn">Sign Up</button>
+                <li>
+                    <button className="login-btn">Login</button>
+                </li>
+                <li>
+                    <button className="sign-up-btn">Sign Up</button>
+                </li>
             </ul>
         </nav>
     </>

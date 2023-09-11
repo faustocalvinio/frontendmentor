@@ -2,12 +2,10 @@ import shortlyLogoSvg from  '../assets/images/logo.svg'
 
 export const Footer = () => {
   return (
-
-
         <footer>
             <div className="footer-container">
                 <div className="footer-logo-container">
-                    <img src={ shortlyLogoSvg } alt="" />
+                    <img src={ shortlyLogoSvg } alt="Shortly foote logo" />
                 </div>
                 <div className="footer-navigation-cont">
                     <h3 className="footer-navigation-title">Features</h3>
@@ -42,6 +40,5 @@ export const Footer = () => {
                 </div>
             </div>
         </footer>
-
     )
 }
