@@ -6,7 +6,7 @@ export const Navbar = () => {
  
     const [theme, setTheme] = useState('light')
 
-    console.log(theme)
+    // console.log(theme)
 
     useEffect(() => {
       if(theme==="dark"){
