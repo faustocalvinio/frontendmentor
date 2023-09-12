@@ -12,6 +12,7 @@ export const LinkContainer = ({longLink,shortLink}) => {
   return (
     <div className='link-container'>
         <p>{longLink}</p>
+        <hr className="responsive-line" />
         <div className='short-link-container'>
             <p>{shortLink}</p>
 

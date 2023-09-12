@@ -7,8 +7,8 @@ export const StadisticsSection = () => {
     <section id="advanced-stadistics">
       <div className="advanced-stadistics-container">
         <div className="advanced-stadistics-texts">
-          <h4>Advanced Stadistics</h4>
-          <p>Track how your links are performing across the web with<br/> our advanced statistics dashboard.</p>
+          <h4 className='advanced-stadistics-title'>Advanced Stadistics</h4>
+          <p className='advanced-stadistics-description'>Track how your links are performing across the web with<br/> our advanced statistics dashboard.</p>
         </div>
         <div className="boxes-container">
           <div className="box-info">

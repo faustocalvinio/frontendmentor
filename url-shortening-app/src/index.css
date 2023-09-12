@@ -286,13 +286,13 @@ nav{
 .advanced-stadistics-container{
   max-width: 1400px;
 }
-.advanced-stadistics-texts h4{
+.advanced-stadistics-title{
   text-align: center;
   font-weight: var(--fontBoldWeight);
   font-size: 40px;
   margin: 0;
 }
-.advanced-stadistics-texts p{
+.advanced-stadistics-description{
   text-align: center;
   color: var(--grayishViolet);
   width: 100%;
@@ -460,13 +460,18 @@ footer{
   .header-title{
     text-align: center;
     font-size: 40px;
+    line-height: 50px;
   }
   .header-text{
     width: 100%;
     text-align: center;
+    margin-top:20px ;
   }
   .header-image-cont, .login-container{
     display: none;
+  }
+  .ul-navigation-container{
+    margin-left: 20px;
   }
   .ul-navigation-container li{
     display: none;
@@ -482,8 +487,58 @@ footer{
   }
   .input-container{
     width: 70%;
-    padding: 10px 30px;
-    gap: 20px;
+    padding: 20px 40px;
+    gap: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .input-url{
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .links-list{
+    align-items: center;
+  }
+  .link-container{
+    width: 80%;
+    gap: 0;
+    padding-top: 0px;
+  }
+  .link-container p {
+    /* border-bottom: 1px solid red; */
+  }
+  .short-link-container{
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    gap: 0;
+  }
+
+  #shorten-button{
+    width: 302px;
+    
+  }
+  .add-a-link{
+    left: 5%;
+    bottom: 29%;
+
+  }
+  .copy-button{
+    width: 100%;
+  }
+  .advanced-stadistics-texts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:20px ;
+  }
+  .advanced-stadistics-title{
+    font-size: 27px;
+  }
+  .advanced-stadistics-description{
+    font-size: 16px;
+    padding: 00px;
+    width: 100%;
   }
   .footer-container{
     align-items: center;
@@ -491,6 +546,7 @@ footer{
   }
   .boxes-container{
     align-items: center;
+    gap: 20px ;
   }
   .box-info{
     width: 70%;
@@ -500,11 +556,52 @@ footer{
     text-align: center;
     height: fit-content;
   }
+  .box-title{
+
+    font-size:27px;
+  }
+  .box-description{
+    font-size: 15px;
+  }
+  #boost-section{
+    padding: 70px 0;
+  }
+  .boost-container{
+    gap: 20px;
+  }
   .boost-title{
     font-size:25px;
     padding: 0 10px;
   }
   .mobile-header-image{
     display: block;
+    overflow-x: hidden;
   }  
+  .mobile-header-image img{
+    width: 130%;
+    height: auto;
+    transform: translateX(20px);
+  }
+  #advanced-stadistics{
+    padding-top: 100px;
+  }
+  footer > *{
+    text-align: center;
+  }
+  .footer-social-icons-cont{
+    margin-top: 20px;
+  }
+
+
+  .line-boxes svg{
+    transform: rotate(90deg);
+    /* height: 445%; */
+  }
+  .line-boxes svg line{
+    /* height: 100px; */
+  }
+
+
+
+
 }
