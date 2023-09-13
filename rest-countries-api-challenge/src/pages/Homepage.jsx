@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { data } from '../mocks/data'
 import { CountryCard } from '../components/';
-import { getAllCountries } from '../services/useFetch';
+import { fetchCountries } from '../services/useFetch';
 
 export const Homepage = () => {
     const [countries, setCountries] = useState([]);
@@ -10,12 +10,30 @@ export const Homepage = () => {
     const [searchValue, setSearchValue] = useState("")
     const [selectedRegion, setSelectedRegion] = useState("")
     const [currentCountries, setCurrentCountries] = useState([])
+    const [initialFetch, setInitialFetch] = useState(false)
+
+
+
+
 
 
    useEffect(() => {
-      console.log(data)
-     setCountries(data)
-     setIsLoading(false)
+    //   console.log(data)
+    //  setCountries(data)
+    //  setIsLoading(false)
+      fetchCountries()
+      .then(countries => {
+        // Puedes trabajar con el array de países aquí
+        console.log('used fetch');
+        setCountries(countries)
+        setCurrentCountries(countries)
+        setIsLoading(false)
+       
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setError(error)
+      });
    }, [])
    
 
@@ -45,7 +63,7 @@ export const Homepage = () => {
         return
         }
       else{             
-        const filteredArr=countries.filter(country=>country.name.includes(searchValue))
+        const filteredArr=countries.filter(country=>country.name.common.includes(searchValue))
         console.log(filteredArr)
         setCurrentCountries(filteredArr)
         }
@@ -83,9 +101,28 @@ export const Homepage = () => {
         <main className="grid-countries">
             {isLoading && !error && <h4 className="loading">Loading........</h4>}
             {error && !isLoading && <h4>{error}</h4>}
-            {/* {countries?.map((country) =><CountryCard key={crypto.randomUUID()} name={country.name} capital={country.capital} flag={country.flags.png} population={country.population} region={country.region}/>)} */}
-            {currentCountries?.map((country) =><CountryCard key={crypto.randomUUID()} name={country.name} capital={country.capital} flag={country.flags.png} population={country.population} region={country.region}/>)}
-
+            {/* 
+            {countries?.map((country) =>
+            <CountryCard 
+            key={crypto.randomUUID()} 
+            name={country.name} 
+            capital={country.capital} 
+            flag={country.flags.png} 
+            population={country.population} 
+            region={country.region}
+            />
+            )} */}
+            {currentCountries?.map((country) =>
+              <CountryCard 
+              key={crypto.randomUUID()} 
+              name={country.name.common} 
+              capital={country.capital} 
+              flag={country.flags.png} 
+              population={country.population} 
+              region={country.region}
+              />
+              )}
+            {/* <span>{ JSON.stringify(currentCountries) }</span> */}
         </main>
       
       </>

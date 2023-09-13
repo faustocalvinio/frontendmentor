@@ -34,11 +34,10 @@ export const SingleCountryCard = ({name="No name provided",flag="https://flagcdn
                     <p><strong>Languages:</strong></p>
             </div>
             <div className="related-countries-container">
-                <h5>Border Countries: 
-                </h5>
-                    {
-                        borders.map(border=><div key={border} className='border-country'>{border}</div>)                    
-                    }
+                <h5 className='related-countries-title'>Border Countries</h5>
+                {
+                    borders.map(border=><div key={border} className='border-country'>{border}</div>)                    
+                }
             </div>
         </div>
     </main>

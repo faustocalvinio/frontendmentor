@@ -40,7 +40,7 @@ export const CountryPage = () => {
     
   return (
     <>
-      { isLoading && true ? <h1>Loading...</h1> : null}
+      { isLoading && true ? <h1 className='loading'>Loading...</h1> : null}
 
       {!isLoading &&  true 
           ?

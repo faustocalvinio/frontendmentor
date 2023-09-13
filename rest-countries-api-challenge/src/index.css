@@ -6,6 +6,9 @@
     --navbarBg:hsl(0, 0%, 100%);
     --countryCardBg:hsl(0, 0%, 100%);
     --cardShadow:rgba(227,227,227,0.32);
+    --scrollBarThumb:hsl(200, 15%, 8%);
+    --scrollBarTrack:#fff;
+
     /* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
     - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
     - Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
@@ -19,6 +22,25 @@
     --fontColor:hsl(0, 0%, 100%);
     --countryCardBg:hsl(209, 23%, 22%);
     --cardShadow: rgba(0,0,0,0.6);
+    --scrollBarThumb:hsl(0, 0%, 100%);
+    --scrollBarTrack:hsl(209, 23%, 22%);
+}
+/* Estilo para la barra de desplazamiento en navegadores webkit (Safari, Chrome) */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento vertical */
+    height: 12px; /* Altura de la barra de desplazamiento horizontal */
+  }
+  
+  /* Estilo para el riel de la barra de desplazamiento en navegadores webkit */
+  ::-webkit-scrollbar-track {
+    background: var(--scrollBarTrack); /* Color de fondo del riel de la barra de desplazamiento */
+  }
+  
+  /* Estilo para el pulgar de la barra de desplazamiento en navegadores webkit */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollBarThumb); /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 6px; /* Borde redondeado del pulgar */
+    height: 50px;
 }
 #root{
     display: flex;
@@ -193,6 +215,9 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 20px;
+}
+.related-countries-title{
+    color: var(--fontColor);
 }
 .single-country-title{
     color: var(--fontColor);
