@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --maxWidth:1400px;
+    
+    --DarkBlue: hsl(233, 26%, 24%);
+    --LimeGreen: hsl(136, 65%, 51%);
+    --BrightCyan: hsl(192, 70%, 51%);
+    --GrayishBlue: hsl(233, 8%, 62%);
+    --LightGrayishBlue: hsl(220, 16%, 96%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    font-family: 'Public Sans';
+}
+body{
+    background-color: var(--VeryLightGray);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    
+}
+nav{
+    width: 100%;
+    background-color: var(--White);
+    padding: 0;
+    margin: 0;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.request-link{
+    background: hsla(136, 65%, 51%, 1);
+
+    background: linear-gradient(45deg, hsla(136, 65%, 51%, 1) 0%, hsla(192, 70%, 51%, 1) 100%);
+
+    background: -moz-linear-gradient(45deg, hsla(136, 65%, 51%, 1) 0%, hsla(192, 70%, 51%, 1) 100%);
+
+    background: -webkit-linear-gradient(45deg, hsla(136, 65%, 51%, 1) 0%, hsla(192, 70%, 51%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#31D35C", endColorstr="#2BB7DA", GradientType=1 );
+    width: fit-content;
+    padding: 15px 30px;
+    color: var(--White);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 400;
+}
+.request-link:hover{
+    animation: brightnessButton 1s forwards ;
+}
+@keyframes brightnessButton {
+    from{
+        filter: brightness(100%);
+    }
+    to{
+        filter: brightness(120%);
+    }
+}
+/* HEADER SECTION */
+header{
+    display: flex;
+    max-width: 1440px;
+}
+.header-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mockups-container{
+    background: url('../images/bg-intro-desktop.svg');
+    background-position: 10% 0;
+    background-repeat: no-repeat;
+}
+.mockups-image{
+
+}
+/* ADVANTAGES SECTION */
+.advantages-section{
+    background-color: var(--LightGrayishBlue);
+    width: 100%;
+}
+.advantages-section-container{
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+.advantages-list{
+    display: flex;
+    max-width: var(--maxWidth);
+    list-style: none;
+    margin:  0px;
+    padding: 0;
+}
+.advantages-item{
+    border: 1px solid red;
+}
+
+/* ARTICLES SECTION */
+.articles-container{
+    max-width: var(--maxWidth);
+    display: flex;
+    gap: 25px;
+}
+article{
+    border: 1px solid red;
+    /* width: 25%; */
+}
+.article-image{
+    width: 100%;
+    aspect-ratio: 16/11;
+}
+/* FOOTER SECTION */
+footer{
+    width: 100%;
+    background-color: var(--DarkBlue);
+}
