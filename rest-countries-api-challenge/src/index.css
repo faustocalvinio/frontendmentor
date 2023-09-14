@@ -215,6 +215,7 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .related-countries-title{
     color: var(--fontColor);

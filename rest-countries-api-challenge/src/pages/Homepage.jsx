@@ -1,34 +1,26 @@
-import { useEffect, useState } from 'react';
-import { data } from '../mocks/data'
+import { useEffect,  useState } from 'react';
 import { CountryCard } from '../components/';
-import { fetchCountries } from '../services/useFetch';
+import { fetchCountries } from '../services/useFetch'; 
 
 export const Homepage = () => {
     const [countries, setCountries] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState("");
-    const [searchValue, setSearchValue] = useState("")
-    const [selectedRegion, setSelectedRegion] = useState("")
-    const [currentCountries, setCurrentCountries] = useState([])
-    const [initialFetch, setInitialFetch] = useState(false)
+    const [searchValue, setSearchValue] = useState("");
+    const [selectedRegion, setSelectedRegion] = useState("");
+    const [currentCountries, setCurrentCountries] = useState([]);
 
-
-
-
-
-
-   useEffect(() => {
-    //   console.log(data)
-    //  setCountries(data)
-    //  setIsLoading(false)
+    
+   useEffect(() => {  
+    
       fetchCountries()
       .then(countries => {
-        // Puedes trabajar con el array de países aquí
+      
         console.log('used fetch');
         setCountries(countries)
         setCurrentCountries(countries)
         setIsLoading(false)
-       
+        
       })
       .catch(error => {
         console.error('Error:', error);
@@ -36,7 +28,7 @@ export const Homepage = () => {
       });
    }, [])
    
-
+   
     const onSearchByName=(name)=>{
       setSearchValue(name)      
     }
@@ -74,10 +66,8 @@ export const Homepage = () => {
     useEffect(() => {      
     }, [countries])
     
-    return (
-  
+    return (  
       <>
-
         <div className="filters-container">
           <input 
             type="text" 
@@ -101,17 +91,7 @@ export const Homepage = () => {
         <main className="grid-countries">
             {isLoading && !error && <h4 className="loading">Loading........</h4>}
             {error && !isLoading && <h4>{error}</h4>}
-            {/* 
-            {countries?.map((country) =>
-            <CountryCard 
-            key={crypto.randomUUID()} 
-            name={country.name} 
-            capital={country.capital} 
-            flag={country.flags.png} 
-            population={country.population} 
-            region={country.region}
-            />
-            )} */}
+            
             {currentCountries?.map((country) =>
               <CountryCard 
               key={crypto.randomUUID()} 
@@ -121,10 +101,9 @@ export const Homepage = () => {
               population={country.population} 
               region={country.region}
               />
-              )}
-            {/* <span>{ JSON.stringify(currentCountries) }</span> */}
-        </main>
-      
+              )}     
+                      
+        </main>      
       </>
     )
 }
