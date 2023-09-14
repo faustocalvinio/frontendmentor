@@ -13,7 +13,11 @@ export const Navbar = () => {
                 <li>pricing</li>
                 <li>resources</li> 
             </ul>
-          
+            <ul className="responsive-menu-container">
+                <li>features</li>
+                <li>pricing</li>
+                <li>resources</li>              
+            </ul>
             <ul className="login-container">    
                 <li>
                     <button className="login-btn">Login</button>

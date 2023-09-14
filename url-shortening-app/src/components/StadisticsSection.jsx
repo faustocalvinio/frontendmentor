@@ -19,6 +19,9 @@ export const StadisticsSection = () => {
           <div className="line-boxes">
             <svg width="25" height="25"><line x1="0" y1="0" x2="25" y2="0" className="jss273"></line></svg>
           </div>
+          <div className="line-responsive">
+            <svg width="15" height="50"><line x1="0" y1="0" x2="25" y2="0" className="jss273"></line></svg>
+          </div>
           <div className="box-info">
             <img src={ DetailedRecords } alt="Detailed records logo"  className="box-image" />
             <h5 className="box-title">Detailed Records</h5>

@@ -484,6 +484,8 @@ footer{
   }
   .header-text-cont{
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
   }
   .input-container{
     width: 70%;
@@ -502,7 +504,7 @@ footer{
   .link-container{
     width: 80%;
     gap: 0;
-    padding-top: 0px;
+    padding: 0 20px 20px 20px;
   }
   .link-container p {
     /* border-bottom: 1px solid red; */
@@ -526,11 +528,16 @@ footer{
   .copy-button{
     width: 100%;
   }
+  #advanced-stadistics{
+    padding-top: 50px;
+  }
   .advanced-stadistics-texts{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap:20px ;
+    width: 90%;
+    margin: 0 auto;
   }
   .advanced-stadistics-title{
     font-size: 27px;
@@ -557,11 +564,24 @@ footer{
     height: fit-content;
   }
   .box-title{
-
+    margin-top: -90px;
     font-size:27px;
   }
   .box-description{
     font-size: 15px;
+  }
+  /* .line-boxes{
+    display: none;
+  } */
+  .line-responsive{
+    justify-content: center;
+    display: flex ;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    stroke: var(--cyanColour);
+    stroke-width: 20px;
+    display: none;
   }
   #boost-section{
     padding: 70px 0;
@@ -582,9 +602,7 @@ footer{
     height: auto;
     transform: translateX(20px);
   }
-  #advanced-stadistics{
-    padding-top: 100px;
-  }
+  
   footer > *{
     text-align: center;
   }
@@ -593,12 +611,12 @@ footer{
   }
 
 
-  .line-boxes svg{
-    transform: rotate(90deg);
-    /* height: 445%; */
-  }
-  .line-boxes svg line{
-    /* height: 100px; */
+  .responsive-menu-container{
+    position: absolute;
+    background-color: violet;
+    border-radius: 5px ;
+    width: 70%;
+    list-style: none;
   }
 
 
