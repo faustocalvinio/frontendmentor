@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 
 :root{
-    --maxWidth:1400px;
-    
+    --maxWidth:1200px;
+    /* --anchoMaximo: 1300px; */
+
     --DarkBlue: hsl(233, 26%, 24%);
     --LimeGreen: hsl(136, 65%, 51%);
     --BrightCyan: hsl(192, 70%, 51%);
@@ -28,13 +29,25 @@ body{
 nav{
     width: 100%;
     background-color: var(--White);
-    padding: 0;
-    margin: 0;
+    padding:15px 0;
+    
 }
 nav ul{
     display: flex;
     justify-content: space-between;
     list-style: none;
+    margin-top: 20px;
+    margin-left: calc((100% - var(--maxWidth)) / 2);
+    margin-right: calc((100% - var(--maxWidth)) / 2);
+    padding: 0;
+}
+#links-nav{
+    display: flex;
+    gap: 20px;
+}
+#links-nav a{
+    text-decoration: none;
+    color: var(--GrayishBlue);
 }
 .request-link{
     background: hsla(136, 65%, 51%, 1);
@@ -67,14 +80,18 @@ nav ul{
 /* HEADER SECTION */
 header{
     display: flex;
-    max-width: 1440px;
+    /* max-width: var(--maxWidth); */
 }
 .header-text-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: calc((100% - var(--maxWidth)) / 2);
 }
-
+.header-text-container p{
+    font-weight: 400;
+    color: var(--GrayishBlue);
+}
 .mockups-container{
     background: url('../images/bg-intro-desktop.svg');
     background-position: 10% 0;
@@ -87,10 +104,22 @@ header{
 .advantages-section{
     background-color: var(--LightGrayishBlue);
     width: 100%;
+    padding: 50px 0 50px;
 }
 .advantages-section-container{
     max-width: var(--maxWidth);
     margin: 0 auto;
+}
+.advantages-section-container h2{
+    color: var(--DarkBlue);
+    font-weight: 400;
+    font-size: 30px;
+}
+.advantages-section-container p{
+    color: var(--GrayishBlue);
+    
+    max-width: 63ch;
+
 }
 .advantages-list{
     display: flex;
@@ -98,27 +127,118 @@ header{
     list-style: none;
     margin:  0px;
     padding: 0;
+    gap: 20px;
 }
 .advantages-item{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    padding: 50px 0;
 }
-
+.item-title{
+    font-weight: 400;
+    color: var(--DarkBlue);
+}
+.item-text{
+    font-weight: 400;
+    color: var(--GrayishBlue);
+    line-height: 27px;
+}
 /* ARTICLES SECTION */
+.lastest-articles-section{
+    padding: 70px 0 100px;
+}
+.lastest-articles-section h2{
+    color: var(--DarkBlue);
+    font-weight: 400;
+    font-size: 30px;
+}
 .articles-container{
     max-width: var(--maxWidth);
     display: flex;
     gap: 25px;
 }
 article{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* width: 25%; */
+    background-color: var(--White);
+    border-radius: 5px;
+    overflow: clip;
 }
 .article-image{
     width: 100%;
     aspect-ratio: 16/11;
 }
+.article-text-container{
+    padding:25px 25px;
+}
+.article-author{
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--GrayishBlue);
+}
+.article-title{
+    font-weight: 400;
+    color: var(--DarkBlue);
+}
+.article-text{
+    font-weight: 400;
+    color: var(--GrayishBlue);
+}
 /* FOOTER SECTION */
 footer{
     width: 100%;
     background-color: var(--DarkBlue);
+    padding: 50px 0;
+}
+.footer-container{
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-logo{
+    filter: invert();
+}
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.socials-container{
+    display: flex;
+    gap: 15px;
+}
+.social-svg{
+    fill: var(--White);
+}
+.social-svg:hover{
+    fill: var(--LimeGreen);
+    cursor: pointer;
+}
+.links-footer{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.links-footer li{
+    color: var(--White);
+    font-weight: 300;
+}
+.links-footer li:hover{
+    color: var(--LimeGreen);
+    cursor: pointer;
+}
+.cont-1-footer{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.copyright-container{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+.copyright-container span{
+    color:  var(--White);
 }
