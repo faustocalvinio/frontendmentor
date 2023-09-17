@@ -451,9 +451,21 @@ footer{
 .hidden{
   display: none;
 }
-
+.responsive-menu-container{
+  top: -450px;
+}
+.svg-toggle-btn{
+  display: none;
+}
+.responsive-menu-container{
+  display: none;
+}
 /* RESPONSIVE MOBILE  */
 @media (max-width:375px){
+  nav{
+    /* position: fixed; */
+  }
+
   .link-container , .footer-container , .boxes-container, .header-cont , .input-container{
     flex-direction: column;
   }
@@ -613,13 +625,83 @@ footer{
 
   .responsive-menu-container{
     position: absolute;
-    background-color: violet;
-    border-radius: 5px ;
+    background-color: #3A3053;
+    border-radius: 10px ;
     width: 70%;
     list-style: none;
+    /* margin-left: 30px; */
+    padding: 50px 20px;
+    margin: 50px 0 0 00px;
+    height: 260px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    left: 10%;
+    /* top: 0px; */
+  }
+
+  .responsive-menu-container li{
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  .responsive-sign-up{
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+  }
+  #responsive-sign-up-li{
+    width: 100%;
+  }
+  .hr-responsive{
+    width: 100%;
+    border-color: var(--grayishViolet);
+    opacity: 0.3;
+    /* border: 0.5px solid red; */
+  }
+
+  .svg-toggle-btn{
+    width:50px;
+    height: auto;
+    margin-right: 10px;
+    display: block;
   }
 
 
-
-
+  .line-boxes{
+    transform: rotate(90deg);
+  }
+  .line-boxes svg{
+    width: 50px;
+  }
+  #toggle-btn{
+    display: block;
+  }
+  .show-responsive{
+    animation: translateResponsiveMenu 0.5s forwards;
+  }
+  .hide-responsive{
+    animation: hideResponsiveMenu 0.5s forwards;
+  }
+  @keyframes translateResponsiveMenu {
+    from{
+      top: -450px;
+    }
+    to{
+      top: 50px;
+    }
+  }
+  @keyframes hideResponsiveMenu {
+    from{
+      top: 50px;
+    }
+    to{
+      top: -450px;
+    }
+  }
 }
