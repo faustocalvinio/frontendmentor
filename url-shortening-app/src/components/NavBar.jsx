@@ -35,8 +35,9 @@ export const Navbar = () => {
             <ul className="responsive-menu-container" ref={responsiveMenu}>
                 <li>features</li>
                 <li>pricing</li>
-                <li>resources</li>              
-                <hr className='hr-responsive' />
+                <li>resources</li>
+                <li><hr className='hr-responsive' /></li>              
+                
                 <li>login</li>
                 <li id='responsive-sign-up-li'><a href="" className="sign-up-btn responsive-sign-up">Sign Up</a></li>
             </ul>

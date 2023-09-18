@@ -14,24 +14,10 @@ export const LinkContainer = ({longLink,shortLink}) => {
         <p>{longLink}</p>        
         <div className='short-link-container'>
             <p>{shortLink}</p>
-
-            {clicked 
-            
-              ? <button
-              
-
-              className='copy-button copied-button'
-            onClick={ ()=>{}}>Copied!</button>
-             
-             :<button
-              
-
-             className='copy-button'
-           onClick={ onCopyText }>Copy</button>
-             }
-
-
-            
+            {clicked             
+              ? <button className='copy-button copied-button' onClick={ ()=>{}}>Copied!</button>
+              :<button className='copy-button'onClick={ onCopyText }>Copy</button>
+            }            
         </div>
     </div>
   )

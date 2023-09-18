@@ -3,49 +3,47 @@ import { LinkContainer } from './LinkContainer'
 
 export const ShortenSection = () => {  
   
-  const [inputValue,setInputValue]=useState("")
-  const [fullLinks, setFullLinks] = useState([{
-    fullLink:'https://www.twitch.tv/',
-    shortenedLink:'shrtco.de/lLRtub',
-  }])
+  const initialLinks= localStorage.getItem('fullLinks') ? JSON.parse(localStorage.getItem('fullLinks')) : [];
 
 
-  const getShortLink=async(link)=>{
-    const response=await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
+  const [inputValue,setInputValue]=useState("");
+  const [fullLinks, setFullLinks] = useState( initialLinks );
+
+
+  const getShortLink = async (link) => {
+    const response=await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
   
-    const data=await response.json()
+    const data=await response.json();
 
     const originalLink=data.result.original_link;
     const shortLink=data.result.short_link;
 
     const updatedArray=[...fullLinks];
+
     updatedArray.push({
-      fullLink:originalLink,
+      fullLink: originalLink,
       shortenedLink: shortLink,
     })
-
-    setFullLinks(updatedArray)    
+    setFullLinks(updatedArray);
+    localStorage.setItem('fullLinks', JSON.stringify(updatedArray));
   }
 
   const useLinkShortener=()=>{
-    const errorTextElement=document.querySelector('.add-a-link')
+    const errorTextElement=document.querySelector('.add-a-link');
     const inputElement=document.querySelector('.input-url');
     if(inputValue===""){
-      errorTextElement.classList.remove('hidden')
-      inputElement.classList.add('red-input')      
-    }else if(inputValue!==""){
-
+      errorTextElement.classList.remove('hidden');
+      inputElement.classList.add('red-input')  ;    
+    } else if(inputValue!=="") {
       if(inputElement.classList.contains('red-input')){
-        inputElement.classList.remove('red-input')
-        errorTextElement.classList.add('hidden')
+        inputElement.classList.remove('red-input');
+        errorTextElement.classList.add('hidden');
       }
-      getShortLink(inputValue)
-      console.log(inputValue)
-      setInputValue("")
+      getShortLink(inputValue);
+      setInputValue("");
     }           
-    
-}
   
+  }  
 
   useEffect(() => {
     
