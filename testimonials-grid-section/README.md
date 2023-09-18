@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/testimonials-grid-section](https://github.com/faustocalvinio/frontendmentor/tree/main/testimonials-grid-section)
+- Solution URL: [https://www.frontendmentor.io/solutions/testimonials-grid-section-challenge-using-only-html-and-css-WSgtKxeort](https://www.frontendmentor.io/solutions/testimonials-grid-section-challenge-using-only-html-and-css-WSgtKxeort)
 - Live Site URL: [https://testimonials-grid-section-fcc.netlify.app/](https://testimonials-grid-section-fcc.netlify.app/)
 
 ## My process

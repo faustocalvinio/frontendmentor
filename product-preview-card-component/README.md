@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/product-preview-card-component](https://github.com/faustocalvinio/frontendmentor/tree/main/product-preview-card-component)
+- Solution URL: [https://www.frontendmentor.io/solutions/product-preview-card-component-VQJUPJRjSS](https://www.frontendmentor.io/solutions/product-preview-card-component-VQJUPJRjSS)
 - Live Site URL: [https://product-preview-card-fcc.netlify.app/](https://product-preview-card-fcc.netlify.app/)
 
 ## My process

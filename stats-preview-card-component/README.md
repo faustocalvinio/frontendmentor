@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/stats-preview-card-component](https://github.com/faustocalvinio/frontendmentor/tree/main/stats-preview-card-component)
+- Solution URL: [https://www.frontendmentor.io/solutions/stats-preview-card-component-challenge-t0GLTdNiwE](https://www.frontendmentor.io/solutions/stats-preview-card-component-challenge-t0GLTdNiwE)
 - Live Site URL: [https://stats-preview-card-fcc.netlify.app/](https://stats-preview-card-fcc.netlify.app/)
 
 ## My process

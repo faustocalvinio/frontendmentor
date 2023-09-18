@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/news-homepage](https://github.com/faustocalvinio/frontendmentor/tree/main/news-homepage)
+- Solution URL: [https://www.frontendmentor.io/solutions/news-homepage-challenge-d1euYn2EZfe](https://www.frontendmentor.io/solutions/news-homepage-challenge-d1euYn2EZf)
 - Live Site URL: [https://news-homepage-frontend-fcc.netlify.app/](https://news-homepage-frontend-fcc.netlify.app/)
 
 ## My process

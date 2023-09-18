@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/interactive-rating-comp](https://github.com/faustocalvinio/frontendmentor/tree/main/interactive-rating-comp)
+- Solution URL: [https://www.frontendmentor.io/solutions/interactive-rating-component-using-html-and-css-Syf65VKH5](https://www.frontendmentor.io/solutions/interactive-rating-component-using-html-and-css-Syf65VKH5)
 - Live Site URL: [https://interactive-rating-comp-fcc.netlify.app/](https://interactive-rating-comp-fcc.netlify.app/)
 
 ## My process

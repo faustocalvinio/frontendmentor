@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/time-tracking-dashboard-main](https://github.com/faustocalvinio/frontendmentor/tree/main/time-tracking-dashboard-main)
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-FvBj0ZWyQI](https://www.frontendmentor.io/solutions/time-tracking-dashboard-FvBj0ZWyQI)
 - Live Site URL: [https://time-tracking-dashboard-fcc.netlify.app/](https://time-tracking-dashboard-fcc.netlify.app/)
 
 ## My process

@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/order-summary](https://github.com/faustocalvinio/frontendmentor/tree/main/order-summary)
+- Solution URL: [https://www.frontendmentor.io/solutions/order-summary-component-using-html-and-css-H1CUkNKr5](https://www.frontendmentor.io/solutions/order-summary-component-using-html-and-css-H1CUkNKr5)
 - Live Site URL: [https://order-summary-fcc.netlify.app/](https://order-summary-fcc.netlify.app/)
 
 ## My process

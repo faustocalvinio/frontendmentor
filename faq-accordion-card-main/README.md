@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/faq-accordion-card-main](https://github.com/faustocalvinio/frontendmentor/tree/main/faq-accordion-card-main)
+- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-card-WY_lAOXbAK](https://www.frontendmentor.io/solutions/faq-accordion-card-WY_lAOXbAK)
 - Live Site URL: [https://faq-accordion-card-fcc.netlify.app/](https://faq-accordion-card-fcc.netlify.app/)
 
 ## My process

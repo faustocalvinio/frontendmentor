@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/3-column-card](https://github.com/faustocalvinio/frontendmentor/tree/main/3-column-card)
+- Solution URL: [https://www.frontendmentor.io/solutions/3-column-preview-card-using-only-html-and-css-TQN_i4ObR](https://www.frontendmentor.io/solutions/3-column-preview-card-using-only-html-and-css-TQN_i4ObR)
 - Live Site URL: [https://3-column-card-fcc.netlify.app/](https://3-column-card-fcc.netlify.app/)
 
 ## My process

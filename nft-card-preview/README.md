@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/nft-card-preview](https://github.com/faustocalvinio/frontendmentor/tree/main/nft-card-preview)
+- Solution URL: [https://www.frontendmentor.io/solutions/nft-card-component-using-only-html-and-css-TSNMqgzw4](https://www.frontendmentor.io/solutions/nft-card-component-using-only-html-and-css-TSNMqgzw4)
 - Live Site URL: [https://nft-card-preview-fcc.netlify.app/](https://nft-card-preview-fcc.netlify.app/)
 
 ## My process

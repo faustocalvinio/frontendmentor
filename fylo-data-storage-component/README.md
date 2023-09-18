@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/fylo-data-storage-component](https://github.com/faustocalvinio/frontendmentor/tree/main/fylo-data-storage-component)
+- Solution URL: [https://www.frontendmentor.io/solutions/fylo-data-storage-component-html-and-css-lyF1THxsCY](https://www.frontendmentor.io/solutions/fylo-data-storage-component-html-and-css-lyF1THxsCY)
 - Live Site URL: [https://fylo-data-storage-component-fcc.netlify.app/](https://fylo-data-storage-component-fcc.netlify.app/)
 
 ## My process

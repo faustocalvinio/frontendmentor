@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/faustocalvinio/frontendmentor/tree/main/advice-generator-app](https://github.com/faustocalvinio/frontendmentor/tree/main/advice-generator-app)
+- Solution URL: [https://www.frontendmentor.io/solutions/advice-generator-app-using-html-css-and-javascript-SJSwIwLUc](https://www.frontendmentor.io/solutions/advice-generator-app-using-html-css-and-javascript-SJSwIwLUc)
 - Live Site URL: [https://advice-generator-app-fcc.netlify.app/](https://advice-generator-app-fcc.netlify.app/)
 
 ## My process
