@@ -6,7 +6,7 @@ You can see them live in the following links:
 
 - [3 Column Card](https://3-column-card-fcc.netlify.app/)
 - [Advice Generator App](https://advice-generator-app-fcc.netlify.app/)
-- [Easybank Landing Page]()
+- [Easybank Landing Page](https://easybank-landing-page-fcc.netlify.app/)
 - [FAQ Accordion Card](https://faq-accordion-card-fcc.netlify.app/)
 - [Fylo Data Storage Component](https://fylo-data-storage-component-fcc.netlify.app/)
 - [Interactive Rating Component](https://interactive-rating-comp-fcc.netlify.app/)
