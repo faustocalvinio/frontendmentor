@@ -12,62 +12,68 @@ const initialTodosBase=[
 
 export const TodosContext = createContext();
 
-export function TodosProvider({ children }) {
-
-  
+export function TodosProvider({ children }) {  
     
     const [todos, setTodos] = useState( JSON.parse(localStorage.getItem('todos')) || initialTodosBase);
-    const [itemsLeft, setItemsLeft] = useState()
+    const [itemsLeft, setItemsLeft] = useState();
 
     const itemsLeftCount = () => {
         const count = todos.filter((todo) => !todo.done).length;
         setItemsLeft(count);
-    }
+    };
 
-    useEffect(() => {
-        itemsLeftCount()
-    },[todos])
-
-    const  addTodo = (todo) =>{
+    const addTodo = (todo) =>{
         setTodos([...todos, todo]);
         localStorage.setItem('todos', JSON.stringify(todos));
-    }
+    };
 
     const deleteTodo = (id) =>{
         const newsTodos = todos.filter((todo) => todo.id !== id);
         setTodos(newsTodos);  
         localStorage.setItem('todos', JSON.stringify(todos));  
-    }
+    };
 
     const toggleTodo = (id) => {
         const newsTodos = todos.map((todo) => {
             if (todo.id === id) {
                 return { ...todo, done: !todo.done };
             }
-            return todo;
-        
+            return todo;        
         });
         console.log(id);
         setTodos(newsTodos);
         localStorage.setItem('todos', JSON.stringify(todos));
-    } 
+    }; 
 
     const emptyTodos=()=>{
         setTodos([]);
-    }
+    };
 
-    const clearCompleted=()=>{     
-        
+    const clearCompleted=()=>{   
         const newTodos = todos.filter((todo) => !todo.done);        
         setTodos(newTodos);
-    }
+    };
 
+    const editTodo = (id, title,status) => {
+        const newsTodos = todos.map((todo) => {
+            if (todo.id === id) {
+                return { ...todo, title , status }
+            }else return todo;
+        });
+        setTodos(newsTodos);
+    };
+
+    useEffect(() => {
+        itemsLeftCount()
+    },[todos]);
+    
     return (
         <TodosContext.Provider
             value={{
                 addTodo,
                 clearCompleted,
                 deleteTodo,
+                editTodo,
                 emptyTodos,
                 itemsLeft,
                 todos,
