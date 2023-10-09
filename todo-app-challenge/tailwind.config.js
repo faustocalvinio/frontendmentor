@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,7 +10,9 @@ export default {
       wider:'16px'
     },
     extend: {
-      darkMode:'class'
+      fontFamily: {
+        sans: ['"Josefin Sans"']
+      }
     },
   },
   plugins: [],

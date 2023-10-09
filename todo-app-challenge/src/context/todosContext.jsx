@@ -1,3 +1,4 @@
+
 import { createContext, useEffect } from 'react'
 import { useState } from 'react';
 
@@ -24,13 +25,11 @@ export function TodosProvider({ children }) {
 
     const addTodo = (todo) =>{
         setTodos([...todos, todo]);
-        localStorage.setItem('todos', JSON.stringify(todos));
     };
 
     const deleteTodo = (id) =>{
         const newsTodos = todos.filter((todo) => todo.id !== id);
         setTodos(newsTodos);  
-        localStorage.setItem('todos', JSON.stringify(todos));  
     };
 
     const toggleTodo = (id) => {
@@ -42,7 +41,6 @@ export function TodosProvider({ children }) {
         });
         console.log(id);
         setTodos(newsTodos);
-        localStorage.setItem('todos', JSON.stringify(todos));
     }; 
 
     const emptyTodos=()=>{
@@ -63,8 +61,15 @@ export function TodosProvider({ children }) {
         setTodos(newsTodos);
     };
 
+    const setInitialTodos=()=>{
+        setTodos(initialTodosBase);
+    
+    }
+
+
     useEffect(() => {
         itemsLeftCount()
+        localStorage.setItem('todos', JSON.stringify(todos));
     },[todos]);
     
     return (
@@ -77,6 +82,7 @@ export function TodosProvider({ children }) {
                 emptyTodos,
                 itemsLeft,
                 todos,
+                setInitialTodos,
                 toggleTodo,
             }}
         >
@@ -87,5 +93,4 @@ export function TodosProvider({ children }) {
     )
 
 }
-
 
