@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import { createContext, useEffect } from 'react'
 import { useState } from 'react';
 
@@ -13,8 +13,7 @@ const initialTodosBase=[
 
 export const TodosContext = createContext();
 
-export function TodosProvider({ children }) {  
-    
+export function TodosProvider({ children }) {      
     const [todos, setTodos] = useState( JSON.parse(localStorage.getItem('todos')) || initialTodosBase);
     const [itemsLeft, setItemsLeft] = useState();
 
@@ -39,7 +38,6 @@ export function TodosProvider({ children }) {
             }
             return todo;        
         });
-        console.log(id);
         setTodos(newsTodos);
     }; 
 
@@ -52,20 +50,18 @@ export function TodosProvider({ children }) {
         setTodos(newTodos);
     };
 
-    const editTodo = (id, title,status) => {
+    const editTodo = (id, title,done) => {
         const newsTodos = todos.map((todo) => {
             if (todo.id === id) {
-                return { ...todo, title , status }
+                return { ...todo, title , done }
             }else return todo;
         });
         setTodos(newsTodos);
     };
 
     const setInitialTodos=()=>{
-        setTodos(initialTodosBase);
-    
-    }
-
+        setTodos(initialTodosBase);    
+    };
 
     useEffect(() => {
         itemsLeftCount()
@@ -94,3 +90,6 @@ export function TodosProvider({ children }) {
 
 }
 
+TodosProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};

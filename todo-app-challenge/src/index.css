@@ -1,3 +1,26 @@
+:root{
+    --DM-DarkGrayishBlue:hsl(234, 11%, 52%);
+    --CheckBackground: linear-gradient(90deg, #57ddff, #c058f3);
+    --DM-DarkGrayishBlue2: hsla(233, 11%, 52%, 0.503);
+}
+.input-status{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--DM-DarkGrayishBlue2);
+    background: transparent;
+    outline: none;
+    cursor: pointer;   
+}
+.input-status:checked {
+    background: url('/images/icon-check.svg') no-repeat 7px 7px,
+      var(--CheckBackground);
+      border: 0;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
